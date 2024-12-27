@@ -23,7 +23,8 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o main .
 FROM alpine:latest
 
 # Install necessary libraries
-RUN apk --no-cache add ca-certificates
+RUN apk --no-cache add ca-certificates tzdata
+ENV TZ=Asia/Seoul
 
 # Set the Current Working Directory inside the container
 WORKDIR /root/
