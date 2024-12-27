@@ -1,0 +1,7 @@
+# Go specific
+/vendor/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib 

@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube-event-deployment
+  labels:
+    app: kube-event
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kube-event
+  template:
+    metadata:
+      labels:
+        app: kube-event
+    spec:
+      containers:
+      - name: kube-event
+        image: yoonseongduk/kube-event:latest
+        imagePullPolicy: Always
+        command: ["/bin/sh", "-c"]
+        args:
+          - |
+            ./main
+            sleep infinity
+
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: log-volume
+          mountPath: /var/log
+      volumes:
+      - name: log-volume
+        emptyDir: {}
