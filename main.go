@@ -53,10 +53,6 @@ func main() {
         os.Exit(1)
     }
 
-    // 1시간 간격의 ticker 생성
-    ticker := time.NewTicker(1 * time.Hour)
-    defer ticker.Stop()
-
     // 이벤트 생성 함수
     createEvents := func() {
         writeLog("Starting event creation cycle...\n")  // 디버깅을 위한 로그 추가
