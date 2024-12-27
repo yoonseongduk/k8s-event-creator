@@ -18,8 +18,12 @@ git branch -M main
 git push -u origin main
 
 ---------------
-## git-cmd.txt file 추가 이후 commit 하기
+## case01 -git-cmd.txt file 추가 이후 commit 하기
 git add git-cmd.txt
 git commit -m "Add git-cmd.txt"
 git push origin main
 
+## case02 - deploy.yaml 파일 update 이후 commit 하기
+git add deploy.yaml
+git commit -m "update deploy.yaml"
+git push origin main

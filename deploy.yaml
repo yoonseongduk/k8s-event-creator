@@ -19,6 +19,9 @@ spec:
         image: yoonseongduk/kube-event:latest
         imagePullPolicy: Always
         command: ["/bin/sh", "-c"]
+        env:
+        - name: TZ
+          value: "Asia/Seoul"
         args:
           - |
             ./main
