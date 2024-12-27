@@ -1,0 +1,25 @@
+# GitHub 웹사이트에서:
+1. https://github.com 접속
+2. New repository 클릭
+3. Repository name: k8s-event-creator 입력
+4. Create repository 클릭
+
+
+# 프로젝트 디렉토리에서:
+git init
+git add .
+git commit -m "Initial commit"
+
+# GitHub 저장소와 연결
+git remote add origin https://github.com/[사용자이름]/k8s-event-creator.git
+
+# main 브랜치로 push
+git branch -M main
+git push -u origin main
+
+---------------
+## git-cmd.txt file 추가 이후 commit 하기
+git add git-cmd.txt
+git commit -m "Add git-cmd.txt"
+git push origin main
+
