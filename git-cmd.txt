@@ -17,7 +17,7 @@ git remote add origin https://github.com/[사용자이름]/k8s-event-creator.git
 git branch -M main
 git push -u origin main
 
----------------
+----------------------------------------
 ## case01 -git-cmd.txt file 추가 이후 commit 하기
 git add git-cmd.txt
 git commit -m "Add git-cmd.txt"
@@ -27,3 +27,4 @@ git push origin main
 git add deploy.yaml
 git commit -m "update deploy.yaml"
 git push origin main
+-----------------------------------------
